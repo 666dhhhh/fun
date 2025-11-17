@@ -6,7 +6,7 @@ import QuestionCard from './components/QuestionCard';
 import ResultCard from './components/ResultCard';
 import ProgressBar from './components/ProgressBar';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const App: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>(INITIAL_QUESTIONS);
